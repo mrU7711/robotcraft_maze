@@ -1,0 +1,9 @@
+<!-- maze_basic_solver.launch: launch stage with maze_BASICsolver node -->
+
+<launch>
+    <!-- Launch the stage simulation -->
+    <node pkg="stage_ros" type="stageros" name="stageros" args="$(find robotcraft_maze)/world/robotcraft_maze.world" />
+    
+    <!-- Launch the basic solver -->
+    <node pkg="robotcraft_maze" type="maze_BASICsolver.py" name="maze_basic_solver" output="screen" />
+</launch>
